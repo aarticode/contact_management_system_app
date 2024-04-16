@@ -1,0 +1,23 @@
+<!-- templates/search.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Search Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Search Result</h1>
+        {% if contact %}
+            <p>Name: {{ contact.name }}</p>
+            <p>Phone: {{ contact.phone }}</p>
+            <p>Email: {{ contact.email }}</p>
+        {% else %}
+            <p>Contact not found!</p>
+        {% endif %}
+        <a href="/">Back to Contacts</a>
+    </div>
+</body>
+</html>
